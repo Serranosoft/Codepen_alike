@@ -1,3 +1,10 @@
+:root {
+    --grey: #2A282A;
+    --buttons: #303036;
+    --dark-grey: #1F1E1F;
+    --black: #131316;
+}
+
 *,
 ::before,
 ::after {
@@ -17,7 +24,7 @@ body {
 .codepen {
     height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-rows: auto 1fr 1fr auto; 
 }
 
 .details-header {
@@ -25,7 +32,13 @@ body {
     grid-template-columns: 1fr auto;
     grid-auto-flow: column;
     align-items: center;
-    border: 2px solid red;
+    background-color: var(--grey);
+    color: white;
+}
+
+.pen-details {
+    font-size: 14px;
+    margin: 5px 5px;
 }
 
 .codepen-img {
@@ -33,23 +46,29 @@ body {
     height: 50px;
     float: left;
 }
+.pen-options button {
+    margin: 5px;
+    font-size: 14px;
+}
 
 /* EDITOR SECTION */
 .pen {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    border: 2px solid red;
 }
 
 .editor {
     display: grid;
     grid-template-rows: auto 1fr;
-    border: 1px solid green;
 }
 
 .editor-header {
     display: grid;
+    background-color: var(--dark-grey);
+    color: #726E72;
     grid-template-columns: auto 1fr auto;
+    align-items:baseline;
+    gap: 5px;
 }
 
 .code-editor {
@@ -57,18 +76,54 @@ body {
     display: grid;
 }
 
+.editor-input {
+    background-color: var(--black);
+    color: white;
+}
+
 /* PREVIEW SECTION */
+
 .preview {
     display: grid;
     justify-items: center;
     align-items: center;
-    border: 2px solid red;
-    /* background: rgb(67,67,69);
-    background: linear-gradient(4deg, rgba(67,67,69,1) 28%, rgba(50,52,53,1) 65%); */
+    background: rgb(67,67,69);
+    background: linear-gradient(4deg, rgba(67,67,69,1) 28%, rgba(50,52,53,1) 65%);
 }
+
+/* FOOTER SECTION */
 
 footer {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    border: 2px solid red;
+    background-color: var(--dark-grey);
+}
+
+/* BUTTONS SECTION */
+
+.button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: var(--buttons);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    
+}
+
+.button-signup {
+    background-color: #13F64C;
+    color: black;
+}
+
+.button-small {
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.button-footer {
+    background-color: var(--dark-grey);
+    padding: 8px;
+    border-right: 1px solid var(--grey);
+    font-size: 10px;
 }
