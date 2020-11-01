@@ -1,0 +1,74 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+
+/* HEADER SECTION */
+
+.codepen {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr auto;
+}
+
+.details-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-flow: column;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.codepen-img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+/* EDITOR SECTION */
+.pen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid red;
+}
+
+.editor {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 1px solid green;
+}
+
+.editor-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.code-editor {
+    /* explicit grid as it creates 1 fr column per default*/
+    display: grid;
+}
+
+/* PREVIEW SECTION */
+.preview {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 2px solid red;
+    /* background: rgb(67,67,69);
+    background: linear-gradient(4deg, rgba(67,67,69,1) 28%, rgba(50,52,53,1) 65%); */
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    border: 2px solid red;
+}
