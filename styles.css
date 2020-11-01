@@ -1,8 +1,9 @@
 :root {
-    --grey: #2A282A;
-    --buttons: #303036;
-    --dark-grey: #1F1E1F;
-    --black: #131316;
+    --header: #1e1f26;
+    --buttons:#333642;
+    --header-editor: #1a1b1f;
+    --editor: #1d1e22;
+    --footer: #2c303a;
 }
 
 *,
@@ -32,7 +33,7 @@ body {
     grid-template-columns: 1fr auto;
     grid-auto-flow: column;
     align-items: center;
-    background-color: var(--grey);
+    background-color: var(--header);
     color: white;
 }
 
@@ -64,7 +65,7 @@ body {
 
 .editor-header {
     display: grid;
-    background-color: var(--dark-grey);
+    background-color: var(--header-editor);
     color: #726E72;
     grid-template-columns: auto 1fr auto;
     align-items:baseline;
@@ -77,8 +78,9 @@ body {
 }
 
 .editor-input {
-    background-color: var(--black);
+    background-color: var(--editor);
     color: white;
+    border: 5px solid #333642;
 }
 
 /* PREVIEW SECTION */
@@ -96,7 +98,7 @@ body {
 footer {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    background-color: var(--dark-grey);
+    background-color: var(--footer);
 }
 
 /* BUTTONS SECTION */
@@ -122,8 +124,7 @@ footer {
 }
 
 .button-footer {
-    background-color: var(--dark-grey);
     padding: 8px;
-    border-right: 1px solid var(--grey);
+    border-right: 1px solid #393d4a;
     font-size: 10px;
 }
